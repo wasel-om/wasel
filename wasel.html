@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>وَصْل | حيث تتحول الترسية إلى تنفيذ ناجح</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* ================================
+   إعدادات عامة
+================================ */
+body {
+    margin: 0;
+    font-family: "Tajawal", Arial, sans-serif;
+    background-color: #f7f9fc;
+    color: #1a1a1a;
+}
+a { text-decoration: none; }
+h1,h2,h3,h4,h5,h6 { margin:0; }
+section { padding: 70px 20px; }
+.container { max-width: 1200px; margin: auto; }
+
+/* ================================
+   الهيدر والقائمة
+================================ */
+header {
+    background: #0B3C5D;
+    color: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+header h1 { font-size: 28px; font-weight: 700; }
+nav a {
+    color: white;
+    margin-left: 20px;
+    font-size: 15px;
+}
+.lang-switch {
+    background: #FF7A18;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* ================================
+   Hero
+================================ */
+.hero {
+    background: linear-gradient(rgba(11,60,93,0.8), rgba(11,60,93,0.8)),
+    url("https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1950&q=80");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+}
+.hero h1 { font-size: 46px; font-weight: 700; margin-bottom: 20px; }
+.hero p { font-size: 20px; margin-bottom: 30px; line-height: 1.5; }
+.btn {
+    background: #FF7A18;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 6px;
+    margin: 5px;
+    display: inline-block;
+    font-weight: 700;
+    transition: 0.3s;
+}
+.btn:hover { background: #e26910; }
+
+/* ================================
+   الأقسام
+================================ */
+.section h2 { font-size: 32px; color: #0B3C5D; margin-bottom: 30px; font-weight: 700; }
+.section p { font-size: 17px; color: #333; line-height: 1.6; margin-bottom: 20px; }
+
+/* ================================
+   Features / Services
+================================ */
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.feature {
+    background: #ffffff;
+    border-radius: 10px;
+    width: 260px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+.feature .icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: #FF7A18;
+}
+.feature h3 { font-size: 20px; margin-bottom: 10px; color: #0B3C5D; font-weight: 700; }
+.feature p { font-size: 15px; color: #555; line-height: 1.4; }
+
+/* ================================
+   Pricing
+================================ */
+.pricing {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.price-card {
+    border-radius: 10px;
+    width: 280px;
+    padding: 30px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+.price-card h3 { font-size: 22px; margin-bottom: 15px; }
+.price-card p { font-size: 16px; margin-bottom: 20px; }
+.price-card:hover { transform: translateY(-5px); }
+.price-basic { background: #5DADE2; }
+.price-professional { background: #F5B041; }
+.price-enterprise { background: #AF7AC5; }
+
+/* ================================
+   How It Works
+================================ */
+.how-step {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    width: 220px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    text-align: center;
+}
+.how-step h4 { font-size: 18px; color: #0B3C5D; margin-bottom: 8px; font-weight: 700; }
+.how-step p { font-size: 15px; color: #555; line-height: 1.4; }
+
+/* ================================
+   About Us
+================================ */
+.about p { margin-bottom: 15px; }
+
+/* ================================
+   Contact
+================================ */
+.contact form { max-width: 500px; margin: auto; display: flex; flex-direction: column; gap: 15px; }
+.contact input, .contact textarea {
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+.contact button {
+    background: #FF7A18;
+    color: white;
+    padding: 14px;
+    font-weight: 700;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.contact button:hover { background: #e26910; }
+
+/* ================================
+   Footer
+================================ */
+footer {
+    background: #0B3C5D;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+}
+
+/* ================================
+   Language support
+================================ */
+body[lang="en"] { direction: ltr; text-align: left; font-family: "Montserrat", sans-serif; }
+body[lang="en"] header h1 { font-family: "Montserrat", sans-serif; }
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body lang="ar">
+
+<header>
+    <h1>وَصْل</h1>
+    <nav>
+        <a href="#services" data-ar="الخدمات" data-en="Services">الخدمات</a>
+        <a href="#problems" data-ar="التحديات" data-en="Challenges">التحديات</a>
+        <a href="#solutions" data-ar="الحل" data-en="Solution">الحل</a>
+        <a href="#pricing" data-ar="الباقات" data-en="Pricing">الباقات</a>
+        <a href="#how" data-ar="كيف نعمل" data-en="How It Works">كيف نعمل</a>
+        <a href="#about" data-ar="من نحن" data-en="About Us">من نحن</a>
+        <a href="#contact" data-ar="تواصل" data-en="Contact">تواصل</a>
+        <span class="lang-switch" onclick="toggleLang()">English</span>
+    </nav>
+</header>
+
+<!-- Hero -->
+<section class="hero" id="home">
+    <h1 data-ar="من الترسية إلى التنفيذ بثقة" data-en="From Tender to Execution with Confidence">من الترسية إلى التنفيذ بثقة</h1>
+    <p data-ar="منصة رقمية تربط الشركات الفائزة بالمناقصات بالمؤسسات الصغيرة والمتوسطة لإدارة التنفيذ والتقييم." 
+       data-en="A digital platform connecting tender-winning companies with SMEs to manage execution and evaluation.">
+       منصة رقمية تربط الشركات الفائزة بالمناقصات بالمؤسسات الصغيرة والمتوسطة لإدارة التنفيذ والتقييم.
+    </p>
+    <a href="#contact" class="btn" data-ar="ابدأ الآن" data-en="Get Started">ابدأ الآن</a>
+    <a href="#contact" class="btn" data-ar="اطلب عرض توضيحي" data-en="Request Demo">اطلب عرض توضيحي</a>
+</section>
+
+<!-- Services -->
+<section class="section" id="services">
+    <h2 data-ar="الخدمات" data-en="Our Services">الخدمات</h2>
+    <div class="features">
+        <div class="feature"><i class="fas fa-handshake icon"></i><h3>شركات مساندة مصنفة</h3><p>قائمة شركات صغيرة ومتوسطة معتمدة رسمياً ومراجعة تراخيصها.</p></div>
+        <div class="feature"><i class="fas fa-chart-line icon"></i><h3>نظام تقييم الأداء</h3><p>تقييم موضوعي مبني على نتائج المشاريع السابقة لضمان الجودة.</p></div>
+        <div class="feature"><i class="fas fa-cogs icon"></i><h3>إدارة المشاريع</h3><p>أدوات لإدارة التنفيذ، رفع المستندات، ومتابعة تقدم المشروع.</p></div>
+        <div class="feature"><i class="fas fa-shield-alt icon"></i><h3>تقليل المخاطر التشغيلية</h3><p>متابعة رقمية دقيقة تقلل الأخطاء والتأخير المحتمل.</p></div>
+        <div class="feature"><i class="fas fa-comments icon"></i><h3>تواصل مباشر</h3><p>شات داخلي واجتماعات Zoom لإتمام الإجراءات دون الحاجة لمراسلات خارجية.</p></div>
+        <div class="feature"><i class="fas fa-file-alt icon"></i><h3>مستندات رقمية</h3><p>رفع وتخزين كل المستندات المطلوبة في مكان آمن ومرتب.</p></div>
+    </div>
+</section>
+
+<!-- Challenges -->
+<section class="section" id="problems">
+    <h2 data-ar="التحديات بعد الترسية" data-en="Post-Tender Challenges">التحديات بعد الترسية</h2>
+    <div class="features">
+        <div class="feature"><i class="fas fa-exclamation-triangle icon"></i><h3>صعوبة اختيار شركاء موثوقين</h3><p>الكثير من الشركات تقدم خدماتها دون سجل أداء موثق.</p></div>
+        <div class="feature"><i class="fas fa-hourglass-half icon"></i><h3>مخاطر التأخير</h3><p>التنفيذ اليدوي وغياب الرقابة يزيد من احتمالية التأخير.</p></div>
+        <div class="feature"><i class="fas fa-times icon"></i><h3>غياب التقييم الحقيقي</h3><p>لا توجد طريقة واضحة لمعرفة جودة الشركات قبل التعاقد.</p></div>
+        <div class="feature"><i class="fas fa-users icon"></i><h3>الاعتماد على العلاقات</h3><p>اتخاذ القرار بناءً على العلاقات الشخصية وليس الأداء.</p></div>
+    </div>
+</section>
+
+<!-- Solution -->
+<section class="section" id="solutions">
+    <h2 data-ar="الحل" data-en="Solution">الحل</h2>
+    <p data-ar="كيف تساعدك وَصْل على التنفيذ بثقة؟" data-en="How WASAL helps you execute with confidence?">كيف تساعدك وَصْل على التنفيذ بثقة؟</p>
+    <div class="features">
+        <div class="feature"><i class="fas fa-check icon"></i><h3>شركات مساندة مصنفة</h3><p>قائمة شركات صغيرة ومتوسطة معتمدة رسمياً ومراجعة تراخيصها.</p></div>
+        <div class="feature"><i class="fas fa-chart-pie icon"></i><h3>نظام تقييم الأداء</h3><p>تقييم موضوعي مبني على نتائج المشاريع السابقة لضمان الجودة.</p></div>
+        <div class="feature"><i class="fas fa-tools icon"></i><h3>إدارة المشاريع</h3><p>أدوات لإدارة التنفيذ، رفع المستندات، ومتابعة تقدم المشروع.</p></div>
+        <div class="feature"><i class="fas fa-shield-alt icon"></i><h3>تقليل المخاطر التشغيلية</h3><p>متابعة رقمية دقيقة تقلل الأخطاء والتأخير المحتمل.</p></div>
+        <div class="feature"><i class="fas fa-comments icon"></i><h3>تواصل مباشر</h3><p>شات داخلي واجتماعات Zoom لإتمام الإجراءات دون الحاجة لمراسلات خارجية.</p></div>
+        <div class="feature"><i class="fas fa-file-alt icon"></i><h3>مستندات رقمية</h3><p>رفع وتخزين كل المستندات المطلوبة في مكان آمن ومرتب.</p></div>
+    </div>
+</section>
+
+<!-- Pricing -->
+<section class="section" id="pricing">
+    <h2 data-ar="الباقات" data-en="Pricing">الباقات</h2>
+    <p data-ar="اختر باقتك وابدأ إدارة مشاريعك بكفاءة" data-en="Choose your plan and start managing your projects efficiently.">اختر باقتك وابدأ إدارة مشاريعك بكفاءة</p>
+    <div class="pricing">
+        <div class="price-card price-basic"><h3>Basic</h3><p>3 طلبات سنوياً، مشروع نشط واحد، شات، تقييم</p><a href="#" class="btn" data-ar="اشترك" data-en="Subscribe">اشترك</a></div>
+        <div class="price-card price-professional"><h3>Professional</h3><p>10 طلبات سنوياً، مشاريع متعددة، تقارير، فلترة متقدمة</p><a href="#" class="btn" data-ar="اشترك" data-en="Subscribe">اشترك</a></div>
+        <div class="price-card price-enterprise"><h3>Enterprise</h3><p>طلبات ومشاريع غير محدودة، تقارير BI، مدير حساب، API</p><a href="#" class="btn" data-ar="اشترك" data-en="Subscribe">اشترك</a></div>
+    </div>
+</section>
+
+<!-- How It Works -->
+<section class="section" id="how">
+    <h2 data-ar="كيف نعمل" data-en="How It Works">كيف نعمل</h2>
+    <div class="features">
+        <div class="how-step"><h4>1. تسجيل الشركة</h4><p>إنشاء حساب وإكمال الملف التعريفي.</p></div>
+        <div class="how-step"><h4>2. إدخال المشروع</h4><p>الشركات الكبرى تنشر الطلبات مع تحديد المتطلبات.</p></div>
+        <div class="how-step"><h4>3. ترشيح الشركات</h4><p>النظام يرشح الشركات الصغيرة المتوافقة مع المعايير.</p></div>
+        <div class="how-step"><h4>4. التقديم والاختيار</h4><p>المؤسسات الصغيرة تتقدم والشركة الكبرى تختار.</p></div>
+        <div class="how-step"><h4>5. إدارة المشروع</h4><p>رفع المستندات، الاجتماعات عبر Zoom، متابعة التنفيذ.</p></div>
+        <div class="how-step"><h4>6. التقييم النهائي</h4><p>الشركات الكبرى تقيم أداء المؤسسات الصغيرة لبناء سجل رقمي موثوق.</p></div>
+    </div>
+</section>
+
+<!-- About Us -->
+<section class="section about" id="about">
+    <h2 data-ar="من نحن" data-en="About Us">من نحن</h2>
+    <p>وصْل هي منصة رقمية عمانية مبتكرة تربط الشركات الكبرى الفائزة بالمناقصات الحكومية أو الخاصة مع المؤسسات الصغيرة والمتوسطة (SMEs)، لتسهيل مرحلة ما بعد الترسية بكل كفاءة وشفافية.</p>
+    <p>تتيح المنصة إدارة اختيار الشركات المساندة، طلب عروض الأسعار، إدارة التنفيذ، تبادل المستندات، عقد الاجتماعات، وإجراء التقييم النهائي لكل مشروع. هدفنا هو التحول من تنفيذ يعتمد على العلاقات الشخصية إلى تنفيذ رقمي مبني على بيانات موثقة وسجل أداء موثوق.</p>
+    <p>قيمنا: الشفافية، الموثوقية، دعم المؤسسات الصغيرة، تسريع التنفيذ، وتحقيق نتائج دقيقة ومضمونة لكل مشروع.</p>
+</section>
+
+<section class="section" id="contact">
+    <h2 style="font-size:32px; color:#0B3C5D;">تواصل معنا</h2>
+    <p style="font-size:18px; margin-bottom:20px;">للاستفسارات أو طلب العرض التوضيحي، يرجى ملء النموذج أدناه وسنرد عليك في أسرع وقت.</p>
+
+    <form style="max-width:600px; margin:0 auto; display:flex; flex-direction:column; gap:15px;">
+        <input type="text" placeholder="الاسم الكامل" required 
+               style="padding:12px; border-radius:6px; border:1px solid #ccc; font-size:16px;">
+        <input type="email" placeholder="البريد الإلكتروني" required 
+               style="padding:12px; border-radius:6px; border:1px solid #ccc; font-size:16px;">
+        <input type="text" placeholder="العنوان" required 
+               style="padding:12px; border-radius:6px; border:1px solid #ccc; font-size:16px;">
+        <textarea placeholder="الموضوع" required rows="5" 
+                  style="padding:12px; border-radius:6px; border:1px solid #ccc; font-size:16px;"></textarea>
+        <button type="submit" 
+                style="background:#FF7A18; color:white; padding:14px; border:none; border-radius:6px; font-size:18px; cursor:pointer;">
+            إرسال
+        </button>
+    </form>
+</section>
+<footer style="background:#0B3C5D; color:white; text-align:center; padding:25px; margin-top:40px; font-size:16px;">
+    © 2026 منصة وَصْل — جميع الحقوق محفوظة
+</footer>
